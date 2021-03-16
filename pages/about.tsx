@@ -1,7 +1,10 @@
 import { MainHeading } from '../components/Headings/Headings'
+import Layout from '../components/Layout/Layout'
 
 export default function About() {
     return (
-        <MainHeading>About Us</MainHeading>
+        <Layout>
+            <MainHeading>About Us</MainHeading>
+        </Layout>
     )
 }
