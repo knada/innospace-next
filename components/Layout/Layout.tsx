@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Nav from '../Nav/Nav'
+import MainNav from '../MainNav/MainNav'
 import styles from './Layout.module.css'
 
 const Layout = ({ children }) => {
@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
                 <title>Innospace</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Nav />
+            <MainNav />
             {children}
         </div>
     )
