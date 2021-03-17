@@ -24,9 +24,5 @@ module.exports = {
         'react/prop-types': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
-        indent: ['error', 4],
-        'linebreak-style': ['error', 'unix'],
-        quotes: ['error', 'single'],
-        semi: ['error', 'never'],
     },
 }
