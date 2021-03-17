@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import InnoSpaceLogo from '../SvgComponents/InnoSpaceLogo/InnoSpaceLogo'
+import InnoSpaceLogo from '../SvgComponents/InnoSpaceLogo'
 
 type DisplayType = 'default' | 'opened' | 'closed'
 
