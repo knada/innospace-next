@@ -16,9 +16,7 @@ const HeaderWithBg = styled.div`
 const tableName = 'Hero'
 
 export async function getStaticProps() {
-    const data = await airtable
-        .base(process.env.AIRTABLE_BASE_ID)(tableName)
-        .find('recHu3lxl0R1xFLeR')
+    const data = await airtable(tableName).find('recHu3lxl0R1xFLeR')
     const main = await data.get('Main')
     const sub = await data.get('Sub')
 
