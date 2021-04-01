@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
+import Link from 'next/link'
 import InnoSpaceLogo from '../SvgComponents/InnoSpaceLogo'
 
 type DisplayType = 'default' | 'opened' | 'closed'
@@ -125,7 +126,7 @@ const NavItem = styled.li`
     }
 `
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
     display: block;
     padding: 6px 6px;
     text-decoration: none;
