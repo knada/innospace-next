@@ -6,10 +6,7 @@ const PageHero = styled.div`
     width: 100%;
     height: 400px;
     background-color: hsla(151, 50%, 60%, 1);
-    background-image: linear-gradient(
-        hsla(250, 20%, 10%, 0.3),
-        hsla(250, 20%, 10%, 0.3)
-    );
+    background-image: url('/assets/svg/leaf.svg');
     background-position: center;
     background-repeat: repeat;
     background-size: center;
