@@ -14,7 +14,7 @@ const colors = {
 
 const typography = {
     primaryFont: '"Poppins", Arial, Helvetica, sans-serif',
-    altFont: '"Muli", Arial, Helvetica, sans-serif',
+    altFont: '"Mulish", Arial, Helvetica, sans-serif',
 }
 
 const theme = {
