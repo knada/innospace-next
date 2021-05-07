@@ -126,7 +126,7 @@ const NavItem = styled.li`
     }
 `
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
     display: block;
     padding: 6px 6px;
     text-decoration: none;
@@ -225,9 +225,9 @@ const MainNav: React.FC = () => {
                 <NavList display={toggled}>
                     {navitems.map(item => (
                         <NavItem key={item.name}>
-                            <NavLink href={`/${item.link}`}>
-                                {item.name}
-                            </NavLink>
+                            <Link href={`/${item.link}`} passHref>
+                                <NavLink>{item.name}</NavLink>
+                            </Link>
                         </NavItem>
                     ))}
                 </NavList>
