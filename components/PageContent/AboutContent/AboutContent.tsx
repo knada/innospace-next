@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import InnerContainer from '../../InnerContainer/InnerContainer'
 
 type AboutPage = {
-    text: string
+    notes: string[]
 }
 
 const AboutSection = styled.section``
@@ -30,12 +30,14 @@ const AboutText = styled.p`
     margin: 1rem;
 `
 
-const AboutContent: FC<AboutPage> = ({ text }) => {
+const AboutContent: FC<AboutPage> = ({ notes }) => {
     return (
         <AboutSection>
             <AboutContainer>
                 <TextSection>
-                    <AboutText>{text}</AboutText>
+                    {notes.map(text => (
+                        <AboutText key={text}>{text}</AboutText>
+                    ))}
                 </TextSection>
             </AboutContainer>
         </AboutSection>
