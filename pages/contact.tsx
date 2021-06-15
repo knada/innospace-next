@@ -1,10 +1,10 @@
 import { MainHeading } from '../components/Headings/Headings'
-import Layout from '../components/Layout/Layout'
+import PageTemplate from '../components/PageTemplate/PageTemplate'
 
 export default function Contact() {
     return (
-        <Layout>
+        <PageTemplate heading="Contact Us">
             <MainHeading>Contact Us</MainHeading>
-        </Layout>
+        </PageTemplate>
     )
 }
