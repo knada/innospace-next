@@ -1,10 +1,10 @@
-import { MainHeading } from '../components/Headings/Headings'
-import Layout from '../components/Layout/Layout'
+import MembershipsContent from '../components/PageContent/MembershipsContent/MembershipsContent'
+import PageTemplate from '../components/PageTemplate/PageTemplate'
 
 export default function Memberships() {
     return (
-        <Layout>
-            <MainHeading>Our Memberships</MainHeading>
-        </Layout>
+        <PageTemplate heading="Our Memberships">
+            <MembershipsContent />
+        </PageTemplate>
     )
 }
