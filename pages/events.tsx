@@ -1,10 +1,10 @@
-import { MainHeading } from '../components/Headings/Headings'
-import Layout from '../components/Layout/Layout'
+import EventsContent from '../components/PageContent/EventsContent/EventsContent'
+import PageTemplate from '../components/PageTemplate/PageTemplate'
 
 export default function Events() {
     return (
-        <Layout>
-            <MainHeading>Our Events</MainHeading>
-        </Layout>
+        <PageTemplate heading="Our Events">
+            <EventsContent />
+        </PageTemplate>
     )
 }
