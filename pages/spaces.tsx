@@ -25,7 +25,6 @@ const getSpaces = () => {
 }
 
 export const getStaticProps = async () => {
-    console.log(await getSpaces())
     return {
         props: {
             spaces: await getSpaces(),
