@@ -1,10 +1,22 @@
-import { MainHeading } from '../components/Headings/Headings'
+import ContactContent from '../components/PageContent/ContactContent/ContactContent'
 import PageTemplate from '../components/PageTemplate/PageTemplate'
+import getTableData from '../utils/getTableData'
 
-export default function Contact() {
+const tableName = 'Contacts'
+
+export const getStaticProps = async () => {
+    const contactsData = await getTableData(tableName)
+    return {
+        props: {
+            contactsData,
+        },
+    }
+}
+
+export default function Contact({ contactsData }) {
     return (
         <PageTemplate heading="Contact Us">
-            <MainHeading>Contact Us</MainHeading>
+            <ContactContent contactsData={contactsData} />
         </PageTemplate>
     )
 }
