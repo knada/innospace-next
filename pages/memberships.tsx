@@ -1,6 +1,6 @@
-import airtable from '../Airtable'
 import MembershipsContent from '../components/PageContent/MembershipsContent/MembershipsContent'
 import PageTemplate from '../components/PageTemplate/PageTemplate'
+import getTableData from '../utils/getTableData'
 
 const memberships = {
     openDesk: 'Open Desk',
@@ -10,23 +10,23 @@ const memberships = {
     multipurpose: 'Multipurpose Centre',
 }
 
-const getTableData = tableName => {
-    return new Promise((resolve, reject) => {
-        airtable(tableName)
-            .select()
-            .firstPage((err, records) => {
-                if (err) return reject(err)
-                return resolve(
-                    records.map(record => {
-                        return {
-                            id: record.id,
-                            fields: record.fields,
-                        }
-                    })
-                )
-            })
-    })
-}
+// const getTableData = tableName => {
+//     return new Promise((resolve, reject) => {
+//         airtable(tableName)
+//             .select()
+//             .firstPage((err, records) => {
+//                 if (err) return reject(err)
+//                 return resolve(
+//                     records.map(record => {
+//                         return {
+//                             id: record.id,
+//                             fields: record.fields,
+//                         }
+//                     })
+//                 )
+//             })
+//     })
+// }
 
 export const getStaticProps = async () => {
     const openDesk = await getTableData(memberships.openDesk)
